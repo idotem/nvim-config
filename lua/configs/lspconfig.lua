@@ -12,7 +12,7 @@ local base = {
 }
 
 -- Servers with default (base-only) config
-local default_servers = { "html", "cssls", "ts_ls" }
+local default_servers = { "html", "cssls", "ts_ls", "jdtls" }
 
 for _, name in ipairs(default_servers) do
   vim.lsp.config(name, base)
