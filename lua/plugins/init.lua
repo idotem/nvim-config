@@ -7,6 +7,9 @@ return {
   -- These are some examples, uncomment them if you want to see them work!
   {
     "neovim/nvim-lspconfig",
+    dependencies = {
+      "nvim-java/nvim-java", -- must load before lspconfig so jdtls gets Lombok + Spring Boot config
+    },
     config = function()
       require "configs.lspconfig"
     end,
@@ -123,9 +126,7 @@ return {
   },
   {
     "nvim-java/nvim-java",
-    dependencies = {
-      "neovim/nvim-lspconfig", -- Ensures LSP config loads in the right order
-    },
+    lazy = false,
     config = function()
       require("java").setup()
     end,
