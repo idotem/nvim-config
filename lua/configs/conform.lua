@@ -11,13 +11,19 @@ local options = {
     python = { "isort", "black" },
     go = { "goimports", "gofumpt" },
     java = { "google-java-format" },
+    vue = { "prettier" },
   },
 
-  -- format_on_save = {
-  --   -- These options will be passed to conform.format()
-  --   timeout_ms = 500,
-  --   lsp_fallback = true,
-  -- },
+  formatters = {
+    prettier = {
+      require_cwd = true,
+    },
+  },
+
+  -- Default options for conform.format()
+  default_format_opts = {
+    lsp_format = "never",
+  },
 }
 
 return options
