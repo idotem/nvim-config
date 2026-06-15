@@ -33,6 +33,7 @@ return {
         -- TypeScript / JavaScript
         "typescript-language-server",
         "prettier",
+        "vue-language-server"
       },
     },
   },
