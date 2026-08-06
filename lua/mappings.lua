@@ -32,3 +32,6 @@ map("n", "<leader>gsy", "<cmd> GoTagAdd yaml <CR>", { desc = "Add yaml struct ta
 
 -- LazyGit
 map("n", "<leader>lg", "<cmd> LazyGit <CR>", { desc = "Open LazyGit" })
+
+map("n", "<C-a>", vim.lsp.buf.code_action, { desc = "LSP Code Actions" })
+

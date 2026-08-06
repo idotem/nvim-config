@@ -2,6 +2,14 @@ vim.g.base46_cache = vim.fn.stdpath "data" .. "/base46/"
 vim.g.mapleader = " "
 -- vim.opt.background = "transparent"
 vim.opt.relativenumber = true
+-- Keep 10 lines above and below the cursor when scrolling vertically
+vim.opt.scrolloff = 10
+-- Keep 10 characters left and right of the cursor when scrolling horizontally
+vim.opt.sidescrolloff = 10
+-- Scroll horizontally 1 character at a time (char-by-char)
+vim.opt.sidescroll = 1
+-- Disable line wrap permanently
+vim.opt.wrap = false
 
 -- bootstrap lazy and all plugins
 local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
