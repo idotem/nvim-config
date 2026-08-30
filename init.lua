@@ -41,6 +41,7 @@ dofile(vim.g.base46_cache .. "statusline")
 
 require "options"
 require "nvchad.autocmds"
+require("configs.jb_theme").setup()
 
 vim.schedule(function()
   require "mappings"

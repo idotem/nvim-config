@@ -132,4 +132,12 @@ return {
       require("java").setup()
     end,
   },
+  {
+    "nickkadutskyi/jb.nvim",
+    lazy = true,
+    opts = {
+      transparent = true,
+    },
+  },
 }
+

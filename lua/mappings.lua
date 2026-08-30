@@ -30,8 +30,10 @@ end, { desc = "Debug last go test" })
 map("n", "<leader>gsj", "<cmd> GoTagAdd json <CR>", { desc = "Add json struct tags" })
 map("n", "<leader>gsy", "<cmd> GoTagAdd yaml <CR>", { desc = "Add yaml struct tags" })
 
--- LazyGit
+-- Git / Gitsigns
 map("n", "<leader>lg", "<cmd> LazyGit <CR>", { desc = "Open LazyGit" })
+map("n", "<leader>cg", "<cmd> Gitsigns preview_hunk <CR>", { desc = "Gitsigns preview hunk" })
 
 map("n", "<C-a>", vim.lsp.buf.code_action, { desc = "LSP Code Actions" })
+
 
