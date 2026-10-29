@@ -33,7 +33,7 @@ return {
         -- TypeScript / JavaScript
         "typescript-language-server",
         "prettier",
-        "vue-language-server"
+        "vue-language-server",
       },
     },
   },
@@ -51,7 +51,8 @@ return {
     lazy = false,
   },
   {
-    "jose-elias-alvarez/null-ls.nvim",
+    "nvimtools/none-ls.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
     ft = "go",
     opts = function()
       return require "custom.configs.null-ls"
@@ -140,4 +141,3 @@ return {
     },
   },
 }
-

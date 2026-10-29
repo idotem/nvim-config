@@ -8,7 +8,7 @@ local opts = {
     null_ls.builtins.formatting.golines,
   },
   on_attach = function(client, bufnr)
-    if client.supports_method "textDocument/formatting" then
+    if client.server_capabilities.documentFormattingProvider then
       vim.api.nvim_clear_autocmds {
         group = augroup,
         buffer = bufnr,
@@ -17,7 +17,12 @@ local opts = {
         group = augroup,
         buffer = bufnr,
         callback = function()
-          vim.lsp.buf.format { bufnr = bufnr }
+          vim.lsp.buf.format {
+            bufnr = bufnr,
+            filter = function(c)
+              return c.name == "null-ls"
+            end,
+          }
         end,
       })
     end
